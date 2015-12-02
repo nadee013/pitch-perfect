@@ -46,12 +46,12 @@
                         <animations/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Nh3-65-ZLu" firstAttribute="top" secondItem="fc3-n0-UvV" secondAttribute="bottom" constant="113" id="DEe-Di-Bdc"/>
+                            <constraint firstItem="Nh3-65-ZLu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NPl-4E-bfv"/>
                             <constraint firstItem="IgE-Zw-cQD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gct-NN-bfn"/>
                             <constraint firstItem="fc3-n0-UvV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gmI-Vw-gvq"/>
                             <constraint firstItem="IgE-Zw-cQD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hFZ-tu-Tgv"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Nh3-65-ZLu" secondAttribute="bottom" constant="40" id="nor-wf-NUB"/>
                             <constraint firstItem="fc3-n0-UvV" firstAttribute="top" secondItem="IgE-Zw-cQD" secondAttribute="bottom" constant="-349" id="xZG-Xh-f6w"/>
-                            <constraint firstItem="Nh3-65-ZLu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xxq-Fx-AkR"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -59,12 +59,12 @@
                                 <exclude reference="Nh3-65-ZLu"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="DEe-Di-Bdc"/>
-                                <exclude reference="xxq-Fx-AkR"/>
                                 <exclude reference="gmI-Vw-gvq"/>
                                 <exclude reference="xZG-Xh-f6w"/>
                                 <exclude reference="gct-NN-bfn"/>
                                 <exclude reference="hFZ-tu-Tgv"/>
+                                <exclude reference="NPl-4E-bfv"/>
+                                <exclude reference="nor-wf-NUB"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -73,12 +73,12 @@
                                 <include reference="Nh3-65-ZLu"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="DEe-Di-Bdc"/>
-                                <include reference="xxq-Fx-AkR"/>
                                 <include reference="gmI-Vw-gvq"/>
                                 <include reference="xZG-Xh-f6w"/>
                                 <include reference="gct-NN-bfn"/>
                                 <include reference="hFZ-tu-Tgv"/>
+                                <include reference="NPl-4E-bfv"/>
+                                <include reference="nor-wf-NUB"/>
                             </mask>
                         </variation>
                     </view>
@@ -245,7 +245,7 @@
     <resources>
         <image name="Chipmonk" width="100" height="100"/>
         <image name="Darth Vader" width="100" height="100"/>
-        <image name="Microphone" width="595" height="842"/>
+        <image name="Microphone" width="100" height="100"/>
         <image name="Rabbit" width="100" height="100"/>
         <image name="Snail" width="100" height="100"/>
         <image name="Stop" width="50" height="50"/>
