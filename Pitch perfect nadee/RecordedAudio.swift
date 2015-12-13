@@ -18,5 +18,4 @@ class RecordedAudio: NSObject {
         self.filePathUrl = filePathUrl
         self.title = title
     }
-    
 }

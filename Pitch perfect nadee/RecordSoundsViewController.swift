@@ -19,8 +19,8 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     var recordedAudio: RecordedAudio!
     
     override func viewDidLoad() {
+        //just after view loading
         super.viewDidLoad()
-        recordingLabel.text = "Tap to start recording"
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,6 +28,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     }
     
     override func viewWillAppear(animated: Bool) {
+        //just after view appear
         stopButton.hidden = true
         recordButton.enabled = true
         recordingLabel.hidden = false
@@ -36,13 +37,13 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
 
 
     @IBAction func recordAudio(sender: UIButton) {
+        //just after clicking microphone button
         stopButton.hidden = false
         recordButton.enabled = false
         recordingLabel.text = "Recording"
         
         let dirPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
         
-       
         let recodingName = "my_audio.wav"
         let pathArray = [dirPath, recodingName]
         let filePath = NSURL.fileURLWithPathComponents(pathArray)
@@ -56,7 +57,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         audioRecorder.meteringEnabled = true
         audioRecorder.prepareToRecord()
         audioRecorder.record()
-        
     }
     
     func audioRecorderDidFinishRecording(recorder: AVAudioRecorder, successfully flag: Bool) {
@@ -77,7 +77,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
             let playSoundsVC:PlaySoundsViewController = segue.destinationViewController as! PlaySoundsViewController
             let data = sender as! RecordedAudio
             playSoundsVC.receivedAudio = data
-            
         }
     }
     

@@ -77,9 +77,7 @@ class PlaySoundsViewController: UIViewController {
         playAudioWithVariablePitch(-1000)
     }
     
-    
     @IBAction func stopAudio(sender: UIButton) {
         audioPlayer.stop()
     }
-
 }
