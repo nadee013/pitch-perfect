@@ -16,7 +16,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IgE-Zw-cQD">
@@ -27,7 +27,7 @@
                                     <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YE7-BS-eaO"/>
                                 </connections>
                             </button>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recording" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fc3-n0-UvV">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recording" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fc3-n0-UvV">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
@@ -47,11 +47,11 @@
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Nh3-65-ZLu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NPl-4E-bfv"/>
+                            <constraint firstItem="fc3-n0-UvV" firstAttribute="centerX" secondItem="IgE-Zw-cQD" secondAttribute="centerX" id="ebd-6d-tgv"/>
                             <constraint firstItem="IgE-Zw-cQD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gct-NN-bfn"/>
-                            <constraint firstItem="fc3-n0-UvV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gmI-Vw-gvq"/>
                             <constraint firstItem="IgE-Zw-cQD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hFZ-tu-Tgv"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Nh3-65-ZLu" secondAttribute="bottom" constant="40" id="nor-wf-NUB"/>
-                            <constraint firstItem="fc3-n0-UvV" firstAttribute="top" secondItem="IgE-Zw-cQD" secondAttribute="bottom" constant="-349" id="xZG-Xh-f6w"/>
+                            <constraint firstItem="fc3-n0-UvV" firstAttribute="top" secondItem="IgE-Zw-cQD" secondAttribute="bottom" constant="23" id="tJa-ZB-aEc"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -59,10 +59,10 @@
                                 <exclude reference="Nh3-65-ZLu"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="gmI-Vw-gvq"/>
-                                <exclude reference="xZG-Xh-f6w"/>
                                 <exclude reference="gct-NN-bfn"/>
                                 <exclude reference="hFZ-tu-Tgv"/>
+                                <exclude reference="ebd-6d-tgv"/>
+                                <exclude reference="tJa-ZB-aEc"/>
                                 <exclude reference="NPl-4E-bfv"/>
                                 <exclude reference="nor-wf-NUB"/>
                             </mask>
@@ -73,16 +73,17 @@
                                 <include reference="Nh3-65-ZLu"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="gmI-Vw-gvq"/>
-                                <include reference="xZG-Xh-f6w"/>
                                 <include reference="gct-NN-bfn"/>
                                 <include reference="hFZ-tu-Tgv"/>
+                                <include reference="ebd-6d-tgv"/>
+                                <include reference="tJa-ZB-aEc"/>
                                 <include reference="NPl-4E-bfv"/>
                                 <include reference="nor-wf-NUB"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Record" id="dwt-CV-u0M"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="recordButton" destination="IgE-Zw-cQD" id="WXA-Ba-PNG"/>
                         <outlet property="recordingLabel" destination="fc3-n0-UvV" id="tIB-Ad-VKQ"/>
@@ -92,7 +93,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1233" y="267"/>
+            <point key="canvasLocation" x="1227" y="267"/>
         </scene>
         <!--Play Sounds View Controller-->
         <scene sceneID="f8J-pP-kGP">
@@ -103,7 +104,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Gp3-4e-DBF"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3vz-MG-wIu">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0cP-SS-jLM">

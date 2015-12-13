@@ -20,6 +20,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        recordingLabel.text = "Tap Microphone to start recording"
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -32,13 +33,15 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
        //Hide the stop button
         stopButton.hidden = true
         recordButton.enabled = true
+        recordingLabel.hidden = false
+        recordingLabel.text = "Tap Microphone to start recording"
     }
 
 
     @IBAction func recordAudio(sender: UIButton) {
         stopButton.hidden = false
         recordButton.enabled = false
-        recordingLabel.hidden = false
+        recordingLabel.text = "Recording"
         
         let dirPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
         
@@ -82,7 +85,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     }
     
     @IBAction func stopAudioRecord(sender: UIButton) {
-        recordingLabel.hidden = true
+        recordingLabel.hidden = true;
         audioRecorder.stop()
         let audioSesiion = AVAudioSession.sharedInstance()
         try! audioSesiion.setActive(false)
