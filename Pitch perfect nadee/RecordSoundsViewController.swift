@@ -20,21 +20,18 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        recordingLabel.text = "Tap Microphone to start recording"
-        // Do any additional setup after loading the view, typically from a nib.
+        recordingLabel.text = "Tap to start recording"
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func viewWillAppear(animated: Bool) {
-       //Hide the stop button
         stopButton.hidden = true
         recordButton.enabled = true
         recordingLabel.hidden = false
-        recordingLabel.text = "Tap Microphone to start recording"
+        recordingLabel.text = "Tap to start recording"
     }
 
 

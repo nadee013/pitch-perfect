@@ -18,27 +18,19 @@ class PlaySoundsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        if let filePath = NSBundle.mainBundle().pathForResource("movie_quote", ofType: "mp3") {
-//            let filePathUrl = NSURL.fileURLWithPath(filePath)
-//           
-//        } else {
-//            print("Error")
-//        }
         audioEngine = AVAudioEngine()
         audioPlayer = try? AVAudioPlayer(contentsOfURL: receivedAudio.filePathUrl)
         audioPlayer.enableRate = true
 
         audioFile = try? AVAudioFile(forReading: receivedAudio.filePathUrl);
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func setupPlay(rate: Float) {
-        audioPlayer.stop()
+        resetAudioPlay()
         audioPlayer.rate = rate
         audioPlayer.currentTime = 0.0
         audioPlayer.play()
@@ -57,9 +49,7 @@ class PlaySoundsViewController: UIViewController {
     }
     
     func playAudioWithVariablePitch(pitch: Float) {
-        audioPlayer.stop()
-        audioEngine.stop()
-        audioEngine.reset()
+        resetAudioPlay()
         
         let audioPlayerNode = AVAudioPlayerNode()
         audioEngine.attachNode(audioPlayerNode)
@@ -77,8 +67,14 @@ class PlaySoundsViewController: UIViewController {
         audioPlayerNode.play()
     }
     
+    func resetAudioPlay() {
+        audioPlayer.stop()
+        audioEngine.stop()
+        audioEngine.reset()
+    }
+    
     @IBAction func playDarthVaderAudio(sender: AnyObject) {
-        playAudioWithVariablePitch(-100)
+        playAudioWithVariablePitch(-1000)
     }
     
     
